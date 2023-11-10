@@ -10,6 +10,22 @@ python setup.py build_ext --inplace
 More details can be found in the original repo.
 
 ## Usage
+
+The dataset structure is as follows:
+```
+seq-nms
+├── dataset/
+│   ├── images/ # original images
+│   │   ├── 0.jpg
+│   │   ├── 1.jpg
+├───|── detected_images/  # yolo detected images
+│   │   ├── 0.jpg
+│   │   ├── 1.jpg
+│   |── yolo_labels/  # yolo detected labels
+│       ├── 0.txt
+│       ├── 1.txt
+```
+
 The main program is ```find_seq.py```, which is based on the original function ```seq_nms.py```. To run the main program, use the following command:
 ```
 python find_seq.py --img [IMAGE FOLDER] --yolo [YOLO DETECTION FOLDER]
