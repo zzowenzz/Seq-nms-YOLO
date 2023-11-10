@@ -46,6 +46,7 @@ def main(args):
     assert boxes.shape == (num_frames, max_num_boxes, 4), "boxes shape is not correct"
     assert scores.shape == (num_frames, max_num_boxes), "scores shape is not correct"
     assert labels.shape == (num_frames, max_num_boxes), "labels shape is not correct"
+    # print(f" boxes: {boxes}; scores: {scores}; labels: {labels}")
 
     # ==========build box sequences==========
     linkage_threshold=0.2

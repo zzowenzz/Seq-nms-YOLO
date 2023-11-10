@@ -6,8 +6,6 @@ compute_overlap.c
 
 data/
 
-dataset/
-
 __pycache__/
 
 utils/__pycache__/
