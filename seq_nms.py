@@ -59,7 +59,7 @@ def build_box_sequences(boxes, scores, labels=[], linkage_threshold=0.5):
                 edges = [ovr_idx for ovr_idx, IoU in enumerate(overlaps) if IoU >= linkage_threshold and labels[f,i] == labels[f+1,ovr_idx]]
             adjacency_matrix.append(edges)
         box_graph.append(adjacency_matrix)
-    return np.array(box_graph)
+    return np.array(box_graph, dtype=object)
 
 def find_best_sequence(box_graph, scores):
     ''' Given graph of all linked boxes, find the best sequence in the graph. The best sequence 
