@@ -1,13 +1,13 @@
-# Seq-NMS for Video Object Detection
-This project provides a python implementation of [Seq-NMS] (https://arxiv.org/abs/1602.08465) post-processing algorithm for video object detection.
+# Seq-NMS + YOLO
+This is an anofficial implementation of Seq-nms. The original paper is [here](https://arxiv.org/abs/1602.08465). The original code is [here](https://github.com/tmoopenn/seq-nms).
+
+The reason of re-implementing this algorithm is to combine it with YOLO. We like to see the difference between the original detection results and the updated detection results. 
 
 ## Setup Details 
-This repository is developed and tested with python 3.7.3. Setup requires and is tested with cython (0.29.20) and numpy (1.18.5)
-
-Run the following command to build and compile the cython file compute_overlap.pyx: 
-```bash
+```
 python setup.py build_ext --inplace
 ```
+More details can be found in the original repo.
 
 ## Usage
 The main program is ```find_seq.py```, which is based on the original function ```seq_nms.py```. To run the main program, use the following command:
